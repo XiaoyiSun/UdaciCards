@@ -30,7 +30,6 @@ class AddCard extends Component {
       ...decks,
       [deckName]: [...decks[deckName], { question, answer }],
     };
-    console.log(updatedDecks);
     await AsyncStorage.setItem('decks', JSON.stringify(updatedDecks));
     this.setState({ question: '', answer: '' });
     // Navigate to Home

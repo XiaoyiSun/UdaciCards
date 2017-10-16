@@ -4,7 +4,6 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 export default class DeckCard extends Component {
   render() {
     const { name, imageSource, questions, navigation } = this.props;
-    console.log(questions);
     return (
       <TouchableOpacity style={styles.cardContainer} onPress={() => navigation.navigate('DeckView', { name, imageSource, questions })}>
         <Text style={{fontSize: 22, color: '#f7f7f7', fontWeight: '700'}}>{name}</Text>
