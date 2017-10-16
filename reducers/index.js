@@ -5,19 +5,19 @@ export default function decks(state = {}, action) {
     case RECEIVE_DECKS:
       return {
         ...state,
-        ...action.decks,
+        ...action.payload.decks,
       };
     case ADD_DECK:
       return {
         ...state,
-        ...action.deck,
+        ...action.payload.deck,
       };
     case ADD_QUESTION:
       return {
         ...state,
-        [action.deckName]: [...state[action.deckName], {
-          question: action.question,
-          answer: action.answer,
+        [action.payload.deckName]: [...state[action.payload.deckName], {
+          question: action.payload.question,
+          answer: action.payload.answer,
         }],
       };
     default:

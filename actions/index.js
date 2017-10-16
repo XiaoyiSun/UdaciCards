@@ -5,22 +5,28 @@ export const ADD_QUESTION = 'ADD_QUESTION';
 export function receiveDecks(decks) {
   return {
     type: RECEIVE_DECKS,
-    decks,
+    payload: {
+      decks,
+    },
   };
 }
 
 export function addDeck(deck) {
   return {
     type: ADD_DECK,
-    deck,
+    payload: {
+      deck,
+    },
   };
 }
 
 export function addQuestion(deckName, question, answer) {
   return {
     type: ADD_QUESTION,
-    deckName,
-    question,
-    answer,
+    payload: {
+      deckName,
+      question,
+      answer,
+    },
   };
 }
