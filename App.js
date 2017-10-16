@@ -12,6 +12,7 @@ import QuizCompleteView from './components/QuizCompleteView';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers';
+import { setLocalNotification } from './utils/helpers';
 
 const Tabs = TabNavigator({
   DeckList: {
@@ -70,6 +71,9 @@ const MainNavigator = StackNavigator({
 });
 
 export default class App extends React.Component {
+  componentDidMount() {
+    setLocalNotification();
+  }
   render() {
     return (
       <Provider store={createStore(reducer)}>

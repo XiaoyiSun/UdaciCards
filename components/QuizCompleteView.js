@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { NavigationActions } from 'react-navigation';
+import { setLocalNotification, clearLocalNotification } from '../utils/helpers';
 
 export default class QuizCompleteView extends Component {
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount() {
+    // Clear local notification
+    clearLocalNotification().then(setLocalNotification);
+  }
   toHome = () => {
     this.props.navigation.dispatch(NavigationActions.reset({
       index: 0,
