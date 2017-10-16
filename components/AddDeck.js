@@ -5,11 +5,8 @@ import { addDeck } from '../actions';
 import { NavigationActions } from 'react-navigation';
 
 class AddDeck extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: '',
-    };
+  state = {
+    text: '',
   }
   async _addDeck() {
     // Update Redux
