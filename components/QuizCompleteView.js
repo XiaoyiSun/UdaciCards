@@ -5,9 +5,6 @@ import { NavigationActions } from 'react-navigation';
 import { setLocalNotification, clearLocalNotification } from '../utils/helpers';
 
 export default class QuizCompleteView extends Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     // Clear local notification
     clearLocalNotification().then(setLocalNotification);

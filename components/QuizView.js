@@ -5,9 +5,6 @@ export default class QuizView extends Component {
   static navigationOptions = {
     headerTintColor: '#333333',
   };
-  constructor(props) {
-    super(props);
-  }
   componentWillMount() {
     this.animatedValue = new Animated.Value(0);
     this.value = 0;
